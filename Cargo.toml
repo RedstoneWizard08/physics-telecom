@@ -3,7 +3,21 @@ name = "physics-telecom"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+chrono = "0.4.35"
+clap = { version = "4.5.3", features = ["derive"] }
+futures = { version = "0.3.30", features = ["compat"] }
+indicatif = { version = "0.17.8", features = ["rayon"] }
 num-traits = "0.2.18"
+rayon = "1.9.0"
+reqwest = { version = "0.11.27", default-features = false, features = ["rustls-tls"] }
+ron = "0.8.1"
+serde = { version = "1.0.197", features = ["derive"] }
+serde_json = "1.0.114"
+tokio = { version = "1.36.0", features = ["full"] }
+tokio-stream = { version = "0.1.15", features = ["full"] }
+tokio-tungstenite = { version = "0.21.0", features = ["rustls"] }
+tokio-util = { version = "0.7.10", features = ["full"] }
+tracing = { version = "0.1.40", features = ["async-await", "log"] }
+tracing-subscriber = { version = "0.3.18", features = ["json", "chrono", "env-filter", "serde"] }
+tungstenite = { version = "0.21.0", features = ["rustls"] }
