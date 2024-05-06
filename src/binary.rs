@@ -1,5 +1,4 @@
 use std::cmp::max;
-
 use crate::util::format_radix;
 
 pub fn parse_binary(bin: impl AsRef<str>) -> u8 {
@@ -19,6 +18,7 @@ pub fn char_to_binary(ch: char) -> String {
     left_pad(format_radix(ch as u8, 2), '0', 8)
 }
 
+// Glad this isn't its own crate :p
 pub fn left_pad(s: impl AsRef<str>, ch: char, num: usize) -> String {
     format!(
         "{}{}",
